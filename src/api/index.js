@@ -1,5 +1,5 @@
 const api_key = import.meta.env.VITE_OPENWEATHER_API_KEY;
-const API_BASE_URL = "http://api.weatherapi.com/v1/forecast.json?";
+const API_BASE_URL = "https://api.weatherapi.com/v1/forecast.json?";
 
 export const getWeatherData = async (cityName) => {
   if (!cityName) return;
