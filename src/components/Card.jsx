@@ -27,7 +27,7 @@ function MainCard() {
 
   return (
     <div>
-      <Card className="m-auto container mt-10">
+      <Card className="m-auto container mt-10 w-94 sm:w-full">
         <CardHeader className="flex justify-between py-4 ">
           <CardTitle>
             <span className="flex gap-1.5 items-center">
@@ -37,9 +37,9 @@ function MainCard() {
           </CardTitle>
           <CardDescription>{formatHour(localtime)}</CardDescription>
         </CardHeader>
-        <div className="m-auto grid grid-row-1">
-          <Card className="w-sm flex items-center justify-center relative px-4 m-auto">
-            <h2 className="font-semibold text-xl w-full text-left">
+        <div className="m-auto grid grid-row-1 lg:grid-cols-2 lg:mx-10 lg:gap-4">
+          <Card className="w-94 flex items-center justify-center h-full px-0 relative sm:px-4 m-auto lg:w-full">
+            <h2 className="font-semibold text-xl w-full text-left px-4">
               {formatDay(localtime)}
             </h2>
             <h1 className="text-9xl  relative pr-14 ">
@@ -71,12 +71,12 @@ function MainCard() {
               </h2>
             </div>
           </Card>
-          <div className="mt-10">
+          <div className="m-auto">
             <WeeklyForecast weekly={weatherData.weekly} />
           </div>
         </div>
         <CardFooter>
-          <div className="flex-col mt-20  w-full justify-center items-center gap-2 ">
+          <div className="flex-col mt-10 w-full justify-center items-center gap-2 ">
             <HourlyForecast hourly={weatherData.hourly} />
           </div>
         </CardFooter>
