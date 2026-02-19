@@ -24,3 +24,4 @@ api
 *.sln
 *.sw?
 *.env
+src/api/index.js
