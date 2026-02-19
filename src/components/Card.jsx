@@ -37,8 +37,8 @@ function MainCard() {
           </CardTitle>
           <CardDescription>{formatHour(localtime)}</CardDescription>
         </CardHeader>
-        <div className="flex flex-wrap justify-between">
-          <Card className="w-md flex items-center justify-center relative px-4 mx-7">
+        <div className="m-auto grid grid-row-1">
+          <Card className="w-sm flex items-center justify-center relative px-4 m-auto">
             <h2 className="font-semibold text-xl w-full text-left">
               {formatDay(localtime)}
             </h2>
@@ -71,7 +71,7 @@ function MainCard() {
               </h2>
             </div>
           </Card>
-          <div>
+          <div className="mt-10">
             <WeeklyForecast weekly={weatherData.weekly} />
           </div>
         </div>

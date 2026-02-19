@@ -6,7 +6,7 @@ const WeeklyForecast = ({ weekly }) => {
   if (!weekly) return null;
 
   return (
-    <div className="space-x-6 justify-center flex flex-wrap items-center mr-6 mt-20 overflow-x-auto">
+    <div className="grid grid-cols-3 gap-2">
       {weekly.map((day, index) => (
         <Card key={index} className="rounded-2xl shadow-md">
           <CardContent className="flex-col-reverse items-center justify-between p-6">
